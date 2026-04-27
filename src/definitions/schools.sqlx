@@ -1,0 +1,11 @@
+config {
+  type: "operations",
+  name: "schools",
+  hasOutput: true
+}
+
+LOAD DATA OVERWRITE `cs544-jan26.p8.schools`
+FROM FILES (
+  format = 'PARQUET',
+  uris = ['gs://cs544-atoscano2-p8/wi-schools-raw.parquet']
+);

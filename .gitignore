@@ -6,4 +6,5 @@ venv/
 *.env
 **/__pycache__/
 **/score.json
-**/result.json
+**/result.jsonsrc/main/
+src/wi-schools-raw.parquet
