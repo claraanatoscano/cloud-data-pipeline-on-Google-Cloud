@@ -1,0 +1,11 @@
+config {
+  type: "operations",
+  name: "schools",
+  hasOutput: true
+}
+
+LOAD DATA OVERWRITE `${defaultProject()}.p8.schools`
+FROM FILES (
+  format = 'PARQUET',
+  uris = ['gs://YOUR_BUCKET_NAME/wi-schools-raw.parquet']
+);
